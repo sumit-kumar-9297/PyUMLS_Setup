@@ -13,13 +13,13 @@ mysql_info = {
 umls_sim = PyUMLS_Similarity(mysql_info=mysql_info)
 
 # Define CUI pairs
-cui_pairs = [
-    # ('Renal failure', 'Kidney failure'),
-    ('hand', 'skull'),
-]
+
+cui_pairs = [('C1140394', 'C0005898'),]
+
+# cui_pairs = [('ear', 'eye'),]
 
 # Define similarity measures
-measures = ['lesk', 'res']
+measures = ['wup', 'res']
 
 # Calculate similarity
 similarity_df = umls_sim.similarity(cui_pairs, measures)
